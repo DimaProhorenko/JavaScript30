@@ -62,7 +62,7 @@ body {
 
     background-color: rgba(0,0,0, .5);
 
-    transition: border-color 250ms ease-in-out;
+    transition: border-color 350ms ease-in-out;
 }
 
 .key::after {
