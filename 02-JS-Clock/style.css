@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --max-width: 40rem;
+}
+
+html {
+    font-size: 10px;
+}
+
+
+.app {
+    min-height: 100vh;
+    background: url("https://unsplash.it/1500/1000?image=881&blur=5") center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    width: 90%;
+    max-width: 30rem;
+    aspect-ratio: 1;
+    border: 1rem solid white;
+    border-radius: 50%;
+    background-color: rgba(255,255,255, .35);
+    position: relative;
+    /* transition: opacity 2000ms ease, scale 2000ms ease; */
+    transition: opacity 2000ms ease;
+}
+
+.clock.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.clock__handle {
+    width: 45%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    rotate: -90deg;
+    transform-origin: center left;
+    transition: transform 200ms ease-in-out;
+}
+
+.clock__handle--minutes {
+    width: 30%;
+    z-index: 2;
+}
+
+.clock__handle--hours {
+    width: 20%;
+    background-color: yellow;
+}
